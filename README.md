@@ -1,4 +1,4 @@
-artificer-pagination-plugin
+Artificer Pagination Plugin
 ===========================
 
 Pagination plugin for Artificer
