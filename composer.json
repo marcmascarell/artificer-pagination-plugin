@@ -1,0 +1,24 @@
+{
+    "name": "mascame/artificer-pagination-plugin",
+    "description": "",
+    "authors": [
+        {
+            "name": "Marc Mascarell",
+            "email": "marcmascarell@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/commands",
+            "src/controllers"
+        ],
+        "psr-0": {
+            "Mascame\\ArtificerPaginationPlugin\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
