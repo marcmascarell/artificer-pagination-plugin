@@ -1,6 +1,13 @@
 {
     "name": "mascame/artificer-pagination-plugin",
-    "description": "",
+    "description": "Pagination plugin. Provides pagination to models.",
+    "homepage": "https://github.com/marcmascarell/artificer-pagination-plugin",
+    "keywords": [
+        "laravel",
+        "artificer",
+        "plugin",
+        "pagination"
+    ],
     "authors": [
         {
             "name": "Marc Mascarell",
