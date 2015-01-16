@@ -3,6 +3,26 @@ Artificer Plugin: Pagination
 
 Pagination plugin for Artificer
 
+Installation
+--------------
+Require this package in your composer.json and run composer update:
+
+    "mascame/artificer-pagination-plugin": "dev-master"
+
+Add the Service Provider to `app/config` at the bottom of Providers:
+
+```php
+'Mascame\ArtificerPaginationPlugin\ArtificerPaginationPluginServiceProvider',
+```
+
+Publish assets and config
+
+```sh
+php artisan artificer-pagination-plugin:publish
+```
+
+Modify config to fill your needs.
+
 Support
 ----
 
