@@ -8,7 +8,7 @@ use App;
 
 class ArtificerPaginationPluginServiceProvider extends ServiceProvider {
 
-    protected $package = 'mascame/artificer-pagination-plugin';
+    protected $name = 'mascame/artificer-pagination-plugin';
 	/**
 	 * Indicates if loading of the provider is deferred.
 	 *
@@ -23,8 +23,6 @@ class ArtificerPaginationPluginServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package($this->package);
-
         $this->addPublishCommand();
 	}
 
@@ -35,13 +33,13 @@ class ArtificerPaginationPluginServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-        $package = $this->package;
+        $name = $this->name;
 
-        App::bind($this->package, function () use ($package) {
-            return new PaginationPlugin($package);
+        App::bind($this->name, function () use ($name) {
+            return new PaginationPlugin($name);
         });
 
-        $pluginManager = new PluginManager($this->package);
+        $pluginManager = new PluginManager($this->name);
 
         $pluginManager->addRoutes(function () {
             Route::group(array('prefix' => 'model'), function () {
@@ -54,7 +52,7 @@ class ArtificerPaginationPluginServiceProvider extends ServiceProvider {
 
     private function addPublishCommand()
     {
-        $command_key = $this->package . '-command-publish';
+        $command_key = $this->name . '-command-publish';
 
         App::bind($command_key, function () {
             return new PublishCommand();
